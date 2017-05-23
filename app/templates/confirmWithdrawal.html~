@@ -1,0 +1,9 @@
+<!DOCTYPE HTML>
+<h3>Welcome customer</h3>
+<form action="" name="withdrawCash" method="post" enctype="multipart/form-data" onsubmit="return ValidateApprovals()">
+	
+<h4> You have selected to withdraw $$$$ amount.</h4>
+	
+<input type="submit" name="submit" value="Accept">&nbsp  &nbsp<input type="submit" name="submit" value="Cancel"> 
+</form>
+</html>

@@ -1,0 +1,8 @@
+<!DOCTYPE HTML>
+<h3>Enter amount in multiples of 100</h3>
+<form action="" name="transferMpesa" method="post" onsubmit="return ValidateApprovals()">
+	Enter phone number: <input type="text" name="phoneNumber"  style = "display:inline" id="datepicker"></p>
+	Amount: <input type="text" name="Amount"  style = "display:inline" ></p>
+<input type="submit" name="submit" value="<< Home">&nbsp  &nbsp<input type="submit" name="submit" value="Cancel"> &nbsp  &nbsp<input type="submit" name="submit" value="Accept >>"> 
+</form>
+</html>

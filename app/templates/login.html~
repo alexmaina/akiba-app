@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+	<h3>Welcome to Akiba bank ATM</h3>
+	<div class ="authenticate">
+	Please enter your PIN<p>
+      {% for message in form.pin.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      <form action = "/login" method = post>
+           {{ form.hidden_tag() }}
+            
+               {{ form.pin }}
+               <p>
+      <input type="submit" value="Enter >>">
+            
+            
+         
+      </form>
+      
+  </div>
+</html>

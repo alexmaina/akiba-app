@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<h3>Welcome to Akiba bank ATM</h3>
+	<div class ="authenticate">
+	
+      {% for message in form.card_id.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      {% for message in form.pin.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      {% for message in form.account_id.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+		
+      <form action = "/registration" method = post>
+           {{ form.hidden_tag() }}
+            
+              {{ form.card_id.label }}: {{ form.card_id }}
+              {{ form.pin.label }}: {{ form.pin }}
+              {{ form.account_id.label }}: {{ form.account_id }}
+              
+               <p>
+      <input type="submit" value="Enter >>">
+            
+            
+         
+      </form>
+      
+  </div>
+</html>
