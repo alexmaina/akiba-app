@@ -2,6 +2,11 @@
 	<h3>Welcome to Akiba bank ATM</h3>
 	<div class ="authenticate">
 	Please enter your PIN<p>
+
+      {% for message in form.card_id.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+
       {% for message in form.pin.errors %}
          <div>{{ message }}</div>
       {% endfor %}
@@ -12,10 +17,7 @@
                {{ form.pin }}
                <p>
       <input type="submit" value="Enter >>">
-            
-            
-         
-      </form>
+       </form>
       
   </div>
 </html>

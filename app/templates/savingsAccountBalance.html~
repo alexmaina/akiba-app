@@ -2,8 +2,8 @@
 <h1>Welcome customer</h1>
 <form action="" name="savingsAccountBalance" method="post" onsubmit="return ValidateApprovals()">
 	
-<h3>Actual balance = $$$$$ </h3><p>
-<h3>Available balance = $$$$$ </h3>
+Actual balance = $$$$$ <p>
+Available balance = $$$$$<p>
 	
 <input type="submit" name="submit" value="<< Home">&nbsp  &nbsp<input type="submit" name="submit" value="Print"> &nbsp  &nbsp<input type="submit" name="submit" value="Exit"> 
 </form>
