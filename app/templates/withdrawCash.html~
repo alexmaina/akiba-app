@@ -1,8 +1,14 @@
 <!DOCTYPE HTML>
-<h3>Enter amount in multiples of 100</h3>
-<form action="" name="withdrawCash" method="post" enctype="multipart/form-data" onsubmit="return ValidateApprovals()">
-	
-	Amount: <input type="text" name="amount"  style = "display:inline"></p>
-<input type="submit" name="submit" value="Accept">&nbsp  &nbsp<input type="submit" name="submit" value="Exit"> 
-</form>
+
+    <title> Akiba bank ATM </title>
+     {% for message in form.amount.errors %}
+         <div>{{ message }}</div>
+     {% endfor %}
+    <h3>Enter amount in multiples of 100</h3>
+     <form action="" name="withdrawCash" method="post">
+      {{ form.hidden_tag() }}
+      {{ form.amount.label }}: {{ form.amount }}<p>
+      	
+      <input type="submit" value="Enter >>">
+     </form>
 </html>

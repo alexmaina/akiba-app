@@ -4,9 +4,8 @@ from flask import render_template, flash, redirect, request
 from app import app
 from .forms import LoginForm
 from .forms import RegistrationForm
+from .forms import WithdrawCash
 import sqlite3 as sql
-#from flask_bcrypt import Bcrypt, generate_password_hash
-
 from bcrypt import hashpw, gensalt, checkpw
 import bcrypt
 
@@ -15,8 +14,7 @@ import bcrypt
 @app.route('/index')
 
 
-
-##############################################################################
+##login
 @app.route('/login', methods = ['POST'])
 def login():
     form = LoginForm()
@@ -33,15 +31,24 @@ def login():
          if hashed is None or not checkpw(pin, hashed[0]):
               return "user not found"
          else:
+	      print (card_id)
               return render_template('index.html')
     
     else:
         return render_template('login.html', form = form)
 
-###############################################################################
+
+##withdraw cash
 @app.route('/withdrawCash', methods=['GET','POST'])
 def withdrawCash():
-         return render_template ('withdrawCash.html')
+         form = WithdrawCash()
+         #return render_template ('withdrawCash.html', form = form)
+         if request.method == 'POST' and form.validate() == True:
+            amount = request.form['amount']
+            return 'you have successfully withdrawn ' + amount +  '&nbsp' + 'amount' 
+         else:
+             return render_template ('withdrawCash.html', form = form)
+         
 
 
 @app.route('/confirmWithdrawal', methods=['GET','POST'])

@@ -4,11 +4,9 @@
   </head>
   <body>
 <h3> Welcome customer</h3>
-  <form action="" name="checkBalance" method="post" onsubmit="return ValidateApprovals()">
-     <div><a href="/currentAccount">Current Account</a></div><p>
-      <div><a href="/savingsAccount">Savings Account</a></div><p>
-     
-     </form>
+  
+     <a href="{{ url_for('currentAccountBalance') }}">Current Account</a><p>
+     <a href="{{ url_for('savingsAccountBalance') }}">Savings Account</a><p>
      <p><input type="submit" value="<< Home"></p>
   </body>
 </html>

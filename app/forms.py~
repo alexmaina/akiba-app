@@ -3,6 +3,7 @@ from wtforms import StringField, IntegerField, BooleanField, PasswordField, Subm
 from wtforms.validators import DataRequired
 
 class LoginForm(Form):
+    card_id = StringField('card_id', validators=[DataRequired("Please enter card id")])
     pin = PasswordField('pin', validators=[DataRequired("please enter pin")])
     submit = SubmitField('Enter >>')
 

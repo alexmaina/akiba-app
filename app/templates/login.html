@@ -14,7 +14,7 @@
       <form action = "/login" method = post>
            {{ form.hidden_tag() }}
                {{ form.card_id.label }}: {{ form.card_id }}<p>
-               {{ form.pin }}
+               {{form.pin.label}}: {{ form.pin }}
                <p>
       <input type="submit" value="Enter >>">
        </form>

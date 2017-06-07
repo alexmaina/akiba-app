@@ -15,6 +15,6 @@ class RegistrationForm(Form):
     
 
 class WithdrawCash(Form):
-    amount = StringField('amount', validators=[DataRequired()])
+    amount = StringField('amount', validators=[DataRequired("Please enter amount")])
     submit = SubmitField('Enter >>')
 

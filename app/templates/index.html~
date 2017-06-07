@@ -3,13 +3,12 @@
     <title> Akiba bank ATM </title>
   </head>
   <body>
+     <a href="{{ url_for('login') }}">login</a><p>
      
-     <div><a href="/login">Home</a></div><p>
-      <div><a href="/registration">registration</a></div><p>
-     <div><a href="/base">Check balance</a></div><p>
-     <div><a href="/withdrawCash">Withdraw cash</a></div><p>
-     <div><a href="/login">Deposit Cash</a></div><p>
-     <div><a href="/cashTransfer">Transfer Cash</a></div><p>
+     <a href="{{ url_for('checkBalance') }}">Check balance</a><p>
+     <a href="{{ url_for('withdrawCash') }}">Withdraw cash</a><p>
+     <a href="{{ url_for('cashTransfer') }}">Transfer cash</a><p>
+     
      <p><input type="submit" value="<< Home"></p>
   </body>
 </html>
